@@ -63,6 +63,7 @@ gobp <- gobp[gobp_hj$GOTERM] # 7636 GOBPs
 
 # 2. Get GOBP results ------
 mydf <- read.table("20240122_cr_base_y2_gsea_results_hj.txt", header = T, sep = "\t")
+mydf = mydf %>% dplyr::filter(NES > 0)
 
 # 3. clustering -------
 ## input GOIDs ----------
